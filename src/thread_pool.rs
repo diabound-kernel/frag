@@ -4,6 +4,7 @@ use std::{
 };
 
 type Job = Box<dyn FnOnce() + Send + 'static>;
+
 enum Task {
     New(Job),
     Terminate,
